@@ -1,0 +1,134 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Homepage Container */
+  .homepage {
+    padding: 20px;
+    background-color: #f2efe7;
+    color: #333;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #4e085f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .cta-button .link {
+    color: #fff;
+  }
+  
+  .cta-button:hover {
+    background-color: #6a0a7b;
+  }
+  
+  /* Features Section */
+  .features {
+    margin-bottom: 40px;
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .features ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .features li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Steps Section */
+  .steps {
+    margin-bottom: 40px;
+  }
+  
+  .steps h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .steps ol {
+    padding-left: 20px;
+  }
+  
+  .steps li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Benefits Section */
+  .benefits {
+    margin-bottom: 40px;
+  }
+  
+  .benefits h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .benefits p {
+    font-size: 1.2rem;
+  }
+  
+  /* Footer Section */
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  /* Media Query for Mobile */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p,
+    .benefits p {
+      font-size: 1rem;
+    }
+  
+    .features li,
+    .steps li {
+      font-size: 1rem;
+    }
+  
+    .cta-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
