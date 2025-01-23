@@ -14,7 +14,10 @@
 .todo-app{
     width: 100%;
     max-width: 540px;
-    background: #fff;
+    background: linear-gradient(#ffffff34,#ffffff27);
+    backdrop-filter: blur(7px);
+    border: 1px solid #ffffff83;
+    box-shadow: 0 8px 32px #0000008a;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
@@ -100,4 +103,21 @@ ul li span{
 }
 ul li span:hover{
     background: #edeef0;
+}
+/* Tablet View (≤ 768px) */
+@media screen and (max-width: 768px) {
+    .todo-app {
+      margin: 80px auto 20px; /* Adjust margin */
+      padding: 30px 20px 50px; /* Reduce padding */
+      border-radius: 8px; /* Slightly smaller border radius */
+    }
+  }
+  
+  /* Mobile View (≤ 480px) */
+  @media screen and (max-width: 480px) {
+    .todo-app {
+      margin: 50px auto 20px; /* Further reduce margin */
+      padding: 20px 15px 40px; /* Compact padding */
+      border-radius: 5px; /* Smaller border radius for compact look */
+    }
 }
