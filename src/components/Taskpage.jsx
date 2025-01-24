@@ -5,6 +5,7 @@ import icon from "/src/assets/icon.png";
 const TaskPage = () => {
   const [tasks, setTasks] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [showAlert, setShowAlert] = useState(false); // State for styled alert
 
   // Load tasks from localStorage on component mount
   useEffect(() => {
@@ -27,7 +28,7 @@ const TaskPage = () => {
 
   const addTask = () => {
     if (!inputValue.trim()) {
-      alert("You must write something!");
+      setShowAlert(true); // Show the styled alert
       return;
     }
     const newTask = { text: inputValue, completed: false };
@@ -81,6 +82,14 @@ const TaskPage = () => {
             </li>
           ))}
         </ul>
+
+        {/* Styled Alert */}
+        {showAlert && (
+          <div className="custom-alert">
+            <p>Ooops... <br/> You must write something!</p>
+            <button onClick={() => setShowAlert(false)}>OK</button>
+          </div>
+        )}
       </div>
     </div>
   );

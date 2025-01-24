@@ -68,8 +68,10 @@ ul li {
     user-select: none;
     cursor: pointer;
     position: relative;
+    color: #fff;
 }
 .todo-app ul li::before{
+    color: #fff;
     content: '';
     position: absolute;
     height: 28px;
@@ -83,7 +85,7 @@ ul li {
 }
 
 ul li.checked{
-    color: #555;
+    color: #cfc7c7;
     text-decoration: line-through;
 }
 ul li.checked::before{
@@ -96,7 +98,7 @@ ul li span{
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #555;
+    color: #ee4545;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
@@ -104,20 +106,129 @@ ul li span{
 ul li span:hover{
     background: #edeef0;
 }
+
+/* Custom Alert */
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    
+    border-radius: 10px;
+    box-shadow: inset #fff 3px 3px 6px 1px, 
+    inset #6e749b4d -2px -2px 6px 0;
+    padding: 20px 30px;
+    text-align: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .custom-alert p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .custom-alert button {
+    background-color: #ff5945;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-alert button:hover {
+    background-color: #e14c3a;
+  }
+  /* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+}
+
+
+/* Responsive Styles */
 /* Tablet View (≤ 768px) */
 @media screen and (max-width: 768px) {
     .todo-app {
-      margin: 80px auto 20px; /* Adjust margin */
-      padding: 30px 20px 50px; /* Reduce padding */
-      border-radius: 8px; /* Slightly smaller border radius */
+      margin: 120px auto 20px;
+      padding: 30px 20px 50px;
+      border-radius: 8px;
+    }
+  
+    .todo-app h2 {
+      font-size: 18px;
+    }
+  
+    .todo-app h2 img {
+      width: 25px;
+    }
+  
+    .row {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 14px;
+    }
+  
+    ul li {
+      font-size: 16px;
+      padding: 10px 8px 10px 45px;
     }
   }
   
   /* Mobile View (≤ 480px) */
   @media screen and (max-width: 480px) {
     .todo-app {
-      margin: 50px auto 20px; /* Further reduce margin */
-      padding: 20px 15px 40px; /* Compact padding */
-      border-radius: 5px; /* Smaller border radius for compact look */
+      margin: 150px auto 20px;
+      padding: 20px 15px 40px;
+      border-radius: 5px;
     }
+  
+    .todo-app h2 {
+      font-size: 16px;
+    }
+  
+    .todo-app h2 img {
+      width: 20px;
+    }
+  
+    .row {
+      padding: 10px;
+    }
+  
+    input {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 12px;
+    }
+  
+    ul li {
+      font-size: 14px;
+      padding: 12px 8px 8px 50px;
+    }
+    
 }
